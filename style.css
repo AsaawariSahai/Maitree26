@@ -23,7 +23,9 @@ body {
   overflow-x: hidden;
 }
 
-/* navbar */
+/* =====================
+   NAVIGATION
+===================== */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
   background: var(--blue);
@@ -36,11 +38,12 @@ nav {
 .nav-logo {
   font-family: "Rouge Script", cursive;
   font-weight: 400;
-  font-style: normal;
   font-size: 3rem;
   color: var(--white);
   letter-spacing: 0.04em;
   text-decoration: none;
+  line-height: 1;
+  flex-shrink: 0;
 }
 .nav-logo span { color: var(--red-light); }
 
@@ -58,6 +61,7 @@ nav {
   padding: 0.35rem 0.65rem;
   border-radius: 3px;
   transition: all 0.2s;
+  white-space: nowrap;
 }
 .nav-links a:hover,
 .nav-links a.active {
@@ -66,15 +70,23 @@ nav {
 }
 
 .hamburger {
-  display: none; flex-direction: column; gap: 5px;
-  cursor: pointer; padding: 4px;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 6px;
+  flex-shrink: 0;
 }
-.hamburger span { width: 24px; height: 2px; background: white; border-radius: 2px; }
+.hamburger span { width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s; }
 
-/* wrapper */
+/* =====================
+   PAGE WRAPPER
+===================== */
 .page-wrapper { padding-top: 58px; min-height: 100vh; }
 
-/* footer */
+/* =====================
+   FOOTER
+===================== */
 footer {
   background: var(--blue);
   color: rgba(255,255,255,0.7);
@@ -91,9 +103,10 @@ footer {
 .footer-brand {
   font-family: "Rouge Script", cursive;
   font-weight: 400;
-  font-style: normal;
-  font-size: 5rem; color: var(--white);
-  font-style: italic; margin-bottom: 0.4rem;
+  font-size: 5rem;
+  color: var(--white);
+  margin-bottom: 0.4rem;
+  line-height: 1.1;
 }
 
 .footer-school {
@@ -113,7 +126,7 @@ footer {
   margin-bottom: 1.2rem;
 }
 
-.contact-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
+.contact-list { list-style: none; display: flex; flex-direction: column; gap: 0.9rem; }
 .contact-list li { display: flex; flex-direction: column; gap: 0.15rem; }
 .contact-name { font-size: 0.88rem; font-weight: 600; color: var(--white); }
 .contact-num { font-size: 0.78rem; color: rgba(255,255,255,0.5); font-family: 'Courier New', monospace; }
@@ -123,11 +136,13 @@ footer {
   padding-top: 1.5rem;
   border-top: 1px solid rgba(255,255,255,0.1);
   display: flex; justify-content: space-between; align-items: center;
-  flex-wrap: wrap; gap: 1rem;
+  flex-wrap: wrap; gap: 0.8rem;
   font-size: 0.72rem; color: rgba(255,255,255,0.3);
 }
 
-/* main */
+/* =====================
+   EVENT PAGE — HERO
+===================== */
 .event-hero {
   background: var(--blue);
   padding: 4rem 2rem 3rem;
@@ -166,7 +181,7 @@ footer {
 }
 
 .event-quickstats {
-  display: flex; flex-wrap: wrap; gap: 1.5rem;
+  display: flex; flex-wrap: wrap; gap: 0.75rem;
   margin-top: 1.5rem; position: relative; z-index: 1;
 }
 
@@ -178,7 +193,9 @@ footer {
 }
 .stat-pill strong { color: var(--white); font-weight: 600; }
 
-/* content */
+/* =====================
+   EVENT PAGE — CONTENT
+===================== */
 .event-content {
   max-width: 860px; margin: 0 auto;
   padding: 3rem 2rem 5rem;
@@ -238,19 +255,164 @@ footer {
 }
 .round-block .round-meta { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 1rem; }
 
-/* fade */
+/* =====================
+   FADE IN
+===================== */
 .fade-in { opacity: 0; transform: translateY(18px); transition: opacity 0.5s, transform 0.5s; }
 .fade-in.visible { opacity: 1; transform: none; }
 
-/* responsive */
-@media (max-width: 768px) {
-  .nav-links { display: none; flex-direction: column; }
+/* =====================
+   RESPONSIVE — TABLET (max 1024px)
+   Nav links start to crowd, shrink them
+===================== */
+@media (max-width: 1024px) {
+  .nav-links a {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.45rem;
+    letter-spacing: 0.04em;
+  }
+  .nav-logo { font-size: 2.4rem; }
+}
+
+/* =====================
+   RESPONSIVE — TABLET (max 900px)
+   Switch to hamburger menu
+===================== */
+@media (max-width: 900px) {
+  /* Nav — hamburger mode */
+  .nav-links {
+    display: none;
+  }
   .nav-links.open {
-    display: flex; position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
     top: 58px; left: 0; right: 0;
-    background: var(--blue); padding: 1rem;
-    border-bottom: 2px solid var(--red); z-index: 999;
+    background: var(--blue);
+    padding: 1rem 1.5rem 1.5rem;
+    border-bottom: 3px solid var(--red);
+    z-index: 999;
+    gap: 0.25rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  }
+  .nav-links.open li { width: 100%; }
+  .nav-links.open a {
+    display: block;
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 0.65rem 0.8rem;
+    border-radius: 4px;
+    letter-spacing: 0.08em;
   }
   .hamburger { display: flex; }
+
+  /* Footer */
   .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
-}   
+  .footer-brand { font-size: 4rem; }
+
+  /* Event hero */
+  .event-hero { padding: 3rem 1.5rem 2.5rem; }
+  .event-title { font-size: clamp(2rem, 8vw, 3.5rem); }
+
+  /* Event content */
+  .event-content { padding: 2rem 1.5rem 4rem; }
+
+  /* Judging grid — 2 cols on tablet */
+  .judging-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* =====================
+   RESPONSIVE — MOBILE (max 600px)
+===================== */
+@media (max-width: 600px) {
+  /* Nav */
+  nav { padding: 0 1rem; }
+  .nav-logo { font-size: 2rem; }
+
+  /* Page wrapper */
+  .page-wrapper { padding-top: 58px; }
+
+  /* Hero (index) */
+  .hero-eyebrow { font-size: 0.65rem !important; letter-spacing: 0.1em !important; }
+  .hero-title { font-size: clamp(4rem, 18vw, 6rem) !important; }
+  .hero-year { font-size: 1rem !important; letter-spacing: 0.2em !important; margin-bottom: 0.6rem !important; }
+  .hero-subtitle { font-size: 0.7rem !important; margin-bottom: 2rem !important; }
+  .countdown-label { font-size: 0.75rem !important; letter-spacing: 0.12em !important; }
+
+  /* Countdown — tighten on small screens */
+  .countdown { gap: 0.5rem !important; margin-bottom: 2rem !important; }
+  .cd-box { padding: 0.6rem 0.5rem !important; }
+  .cd-num { font-size: 1.6rem !important; min-width: 44px !important; }
+  .cd-sep { font-size: 1.8rem !important; padding-top: 0.2rem !important; }
+  .cd-label { font-size: 0.52rem !important; }
+
+  /* Hero buttons */
+  .hero-btns { flex-direction: column; align-items: center; gap: 0.75rem !important; }
+  .btn-primary, .btn-outline { width: 100%; max-width: 280px; text-align: center; }
+
+  /* Marquee — smaller tiles */
+  .marquee-label { font-size: 0.68rem !important; }
+  .gallery-tile { width: 150px !important; height: 110px !important; font-size: 0.62rem !important; }
+
+  /* Events grid — 1 col */
+  .events-preview { padding: 3rem 1rem !important; }
+  .section-title { font-size: 1.5rem !important; }
+  .events-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
+  .card-name { font-size: 1.35rem !important; }
+  .card-meta { flex-direction: column; gap: 0.25rem !important; }
+
+  /* Event hero */
+  .event-hero { padding: 2rem 1rem 2rem; }
+  .back-btn { font-size: 0.7rem; margin-bottom: 1.2rem; }
+  .event-type-tag { font-size: 0.6rem; }
+  .event-title { font-size: clamp(1.8rem, 10vw, 2.5rem); }
+  .event-quickstats { gap: 0.5rem; }
+  .stat-pill { font-size: 0.72rem; padding: 0.4rem 0.7rem; }
+
+  /* Event content */
+  .event-content { padding: 1.5rem 1rem 3rem; }
+  .content-block h3 { font-size: 0.9rem; }
+  .rules-list li { font-size: 0.84rem; }
+
+  /* Judging grid — 1 col on mobile */
+  .judging-grid { grid-template-columns: 1fr !important; }
+  .judging-item .num { font-size: 1.4rem; }
+  .judging-item p { font-size: 0.8rem; }
+
+  /* Round blocks */
+  .round-block { padding: 1rem; }
+  .round-meta { font-size: 0.7rem !important; }
+
+  /* Footer */
+  .footer-brand { font-size: 3rem; }
+  .footer-school { font-size: 0.62rem; }
+  .contact-name { font-size: 0.82rem; }
+  .contact-num { font-size: 0.72rem; }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+    font-size: 0.65rem;
+  }
+
+  /* Submissions page */
+  .sub-hero { padding: 3.5rem 1rem 3rem !important; }
+  .sub-hero h1 { font-size: clamp(2rem, 10vw, 3rem) !important; }
+  .sub-hero p { font-size: 0.82rem !important; }
+  .sub-content { padding: 2rem 1rem 3rem !important; }
+  .email-addr { font-size: 1rem !important; }
+  .checklist label { font-size: 0.8rem !important; }
+}
+
+/* =====================
+   RESPONSIVE — SMALL MOBILE (max 380px)
+===================== */
+@media (max-width: 380px) {
+  .nav-logo { font-size: 1.7rem; }
+  .cd-num { font-size: 1.35rem !important; min-width: 38px !important; }
+  .cd-sep { font-size: 1.4rem !important; }
+  .hero-title { font-size: clamp(3.2rem, 20vw, 5rem) !important; }
+  .event-title { font-size: clamp(1.6rem, 11vw, 2.2rem); }
+  .stat-pill { font-size: 0.65rem; padding: 0.3rem 0.55rem; }
+}
