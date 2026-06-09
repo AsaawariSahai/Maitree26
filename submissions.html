@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submissions - Maitree 2026</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Rouge+Script&display=swap" rel="stylesheet">
+  <style>
+    /* specific */
+    .sub-hero {
+      background: linear-gradient(135deg, var(--blue) 0%, var(--blue-mid) 100%);
+      padding: 5rem 2rem 4rem;
+      text-align: center;
+    }
+    .sub-eyebrow {
+      font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: rgba(255,255,255,0.4); margin-bottom: 1rem;
+    }
+    .sub-hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      color: var(--white); font-style: italic; margin-bottom: 0.8rem;
+    }
+    .sub-hero p {
+      color: rgba(255,255,255,0.6); font-size: 0.9rem;
+      max-width: 500px; margin: 0 auto; line-height: 1.7;
+    }
+
+    .sub-content {
+      max-width: 640px; margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    .email-box {
+      background: var(--white); border: 2px solid var(--blue);
+      border-radius: 8px; padding: 2rem; text-align: center; margin: 2rem 0;
+    }
+    .email-label {
+      font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--text-muted); margin-bottom: 0.6rem;
+    }
+    .email-addr {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem; color: var(--blue); font-weight: 700;
+      word-break: break-all;
+    }
+
+    .submit-btn {
+      display: block; width: 100%;
+      background: var(--red); color: var(--white);
+      text-decoration: none; text-align: center;
+      padding: 1.1rem; border-radius: 6px;
+      font-size: 0.9rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      transition: background 0.2s, transform 0.15s; margin-top: 1rem;
+    }
+    .submit-btn:hover { background: var(--red-dark); transform: translateY(-2px); }
+
+    .deadline-note {
+      background: #FFF8F8;
+      border: 1px solid rgba(200,16,46,0.2);
+      border-left: 4px solid var(--red);
+      border-radius: 4px; padding: 1.2rem 1.5rem; margin-top: 2rem;
+      font-size: 0.83rem; color: var(--text-muted); line-height: 1.8;
+    }
+    .deadline-note strong { color: var(--red-dark); }
+
+    .checklist-section { margin-top: 2.5rem; }
+    .checklist-section h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem; color: var(--blue); margin-bottom: 1rem; letter-spacing: 0.04em;
+    }
+    .checklist { display: flex; flex-direction: column; gap: 0.7rem; }
+    .checklist label {
+      display: flex; align-items: flex-start; gap: 0.8rem;
+      font-size: 0.85rem; cursor: pointer; line-height: 1.5; color: var(--text);
+    }
+    .checklist input[type="checkbox"] {
+      accent-color: var(--red); width: 16px; height: 16px;
+      flex-shrink: 0; margin-top: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- navbar -->
+  <nav>
+    <a class="nav-logo" href="index.html">Maitree <span>'26</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="metamorphosis.html">Fashion</a></li>
+      <li><a href="footnotes.html">Dance</a></li>
+      <li><a href="crescendo.html">Music</a></li>
+      <li><a href="whisked.html">Cooking</a></li>
+      <li><a href="curtain.html">Drama</a></li>
+      <li><a href="stroked.html">Art</a></li>
+      <li><a href="cue.html">Videography</a></li>
+      <li><a href="submissions.html" class="active">Submissions</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+
+    <!-- main -->
+    <div class="sub-hero">
+      <h1>Submissions</h1>
+      <p>All tracks, scripts, presentations and videos must be submitted via the drive link. Use the email below for any queries or direct submissions.</p>
+    </div>
+
+    <!-- content -->
+    <div class="sub-content">
+
+      <div class="email-box fade-in">
+        <p class="email-label">Official Submissions Email</p>
+        <p class="email-addr">cca@mhsforgirls.edu.in</p>
+      </div>
+
+      <a href="mailto:cca@mhsforgirls.edu.in?subject=Maitree 2026 - Submission" class="submit-btn fade-in">
+        Mail Here →
+      </a>
+
+      <div class="deadline-note fade-in">
+        <strong>Important Deadlines</strong><br><br>
+        All music tracks, presentations, and videos must be submitted in the provided drive link by <strong>28th July 2026</strong>.<br><br>
+        The Curtain Call script (Round 1) must also be submitted by <strong>28th July 2026</strong>.<br><br>
+        The Cue! final edited video must be submitted before <strong>1:20 p.m. on the day of the event</strong>.<br><br>
+        Teams must also bring all tracks and presentations on a <strong>pendrive</strong> on event day as a backup.
+      </div>
+
+      <div class="checklist-section fade-in">
+        <h3>Quick Submission Checklist</h3>
+        <div class="checklist">
+          <label><input type="checkbox"> Metamorphosis - Music track + Brochure (3 copies) + Background presentation/video</label>
+          <label><input type="checkbox"> Footnotes - Music track</label>
+          <label><input type="checkbox"> Curtain Call - Written script, Round 1 (co-authored by both script writers)</label>
+          <label><input type="checkbox"> Cue! - Final edited video (submitted before 1:20 p.m. on event day)</label>
+          <label><input type="checkbox"> Pendrive with all tracks/videos ready for event day</label>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">Maitree</div>
+          <div class="footer-school">Modern High School for Girls · Kolkata</div>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <ul class="contact-list">
+            <li><span class="contact-name">Sohani Chowdhury</span><span class="contact-num">+91 91470 88850</span></li>
+            <li><span class="contact-name">Ponam Agarwal</span><span class="contact-num">+91 98368 06100</span></li>
+            <li><span class="contact-name">Asaawari Sahai</span><span class="contact-num">+91 74390 76393</span></li>
+            <li><span class="contact-name">Nitya Shah</span><span class="contact-num">+91 79800 17937</span></li>
+            <li><span class="contact-name">Vaanya Karel</span><span class="contact-num">+91 98302 70409</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Maitree - Modern High School for Girls, Kolkata</span>
+        <span>31st July 2026</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    function toggleMenu() { document.getElementById('navLinks').classList.toggle('open'); }
+    setTimeout(() => { document.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible')); }, 150);
+  </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stroke'd - Maitree 2026</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Rouge+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- navbar -->
+  <nav>
+    <a class="nav-logo" href="index.html">Maitree <span>'26</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="metamorphosis.html">Fashion</a></li>
+      <li><a href="footnotes.html">Dance</a></li>
+      <li><a href="crescendo.html">Music</a></li>
+      <li><a href="whisked.html">Cooking</a></li>
+      <li><a href="curtain.html">Drama</a></li>
+      <li><a href="stroked.html" class="active">Art</a></li>
+      <li><a href="cue.html">Videography</a></li>
+      <li><a href="submissions.html">Submissions</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+
+    <!-- main -->
+    <div class="event-hero">
+      <a class="back-btn" href="index.html">← Back to Home</a>
+      <span class="event-type-tag">Art &amp; Creative Writing</span>
+      <h1 class="event-title">Stroke'd</h1>
+      <div class="event-quickstats">
+        <span class="stat-pill"><strong>2</strong> Participants</span>
+        <span class="stat-pill"><strong>3</strong> Rounds</span>
+        <span class="stat-pill"><strong>30 min</strong> per round</span>
+        <span class="stat-pill">Elimination format</span>
+      </div>
+    </div>
+
+    <!-- content -->
+    <div class="event-content">
+
+      <div class="content-block fade-in">
+        <h3>Rules &amp; Regulations</h3>
+        <ul class="rules-list">
+          <li>There will be a total of 3 rounds. This is an elimination-based event - a house must qualify at the end of each round to progress to the next.</li>
+          <li>Both members must work collaboratively on a single artwork for each round. Individual or divided submissions will not be accepted.</li>
+          <li>The theme for each round will be revealed exactly <strong>5 minutes</strong> before the round begins.</li>
+          <li>Each round is designed to test participants' skills and versatility in different art forms - for example, canvas painting, sketching, digital art, etc.</li>
+          <li>Participants must bring their own materials and devices. Devices must have digital art applications downloaded and ready to use.</li>
+          <li>Further details will be provided on the day of the event.</li>
+          <li>The decision of the judges will be final and binding.</li>
+        </ul>
+      </div>
+
+      <div class="content-block fade-in">
+        <h3>Judging Criteria</h3>
+        <div class="judging-grid">
+          <div class="judging-item"><div class="num">01</div><p>Creativity &amp; Originality</p></div>
+          <div class="judging-item"><div class="num">02</div><p>Relevance to Theme</p></div>
+          <div class="judging-item"><div class="num">03</div><p>Technical Skill &amp; Execution</p></div>
+          <div class="judging-item"><div class="num">04</div><p>Team Collaboration</p></div>
+          <div class="judging-item"><div class="num">05</div><p>Presentation &amp; Visual Impact</p></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">Maitree</div>
+          <div class="footer-school">Modern High School for Girls · Kolkata</div>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <ul class="contact-list">
+            <li><span class="contact-name">Sohani Chowdhury</span><span class="contact-num">+91 91470 88850</span></li>
+            <li><span class="contact-name">Ponam Agarwal</span><span class="contact-num">+91 98368 06100</span></li>
+            <li><span class="contact-name">Asaawari Sahai</span><span class="contact-num">+91 74390 76393</span></li>
+            <li><span class="contact-name">Nitya Shah</span><span class="contact-num">+91 79800 17937</span></li>
+            <li><span class="contact-name">Vaanya Karel</span><span class="contact-num">+91 98302 70409</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Maitree - Modern High School for Girls, Kolkata</span>
+        <span>31st July 2026</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    function toggleMenu() { document.getElementById('navLinks').classList.toggle('open'); }
+    setTimeout(() => { document.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible')); }, 150);
+  </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crescendo - Maitree 2026</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Rouge+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- navbar -->
+  <nav>
+    <a class="nav-logo" href="index.html">Maitree <span>'26</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="metamorphosis.html">Fashion</a></li>
+      <li><a href="footnotes.html">Dance</a></li>
+      <li><a href="crescendo.html" class="active">Music</a></li>
+      <li><a href="whisked.html">Cooking</a></li>
+      <li><a href="curtain.html">Drama</a></li>
+      <li><a href="stroked.html">Art</a></li>
+      <li><a href="cue.html">Videography</a></li>
+      <li><a href="submissions.html">Submissions</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+
+    <!-- main -->
+    <div class="event-hero">
+      <a class="back-btn" href="index.html">← Back to Home</a>
+      <span class="event-type-tag">Fusion Music</span>
+      <h1 class="event-title">Crescendo</h1>
+      <div class="event-quickstats">
+        <span class="stat-pill"><strong>5+2</strong> Participants</span>
+        <span class="stat-pill"><strong>Min. 3</strong> Instrumentalists</span>
+        <span class="stat-pill"><strong>5+2</strong> Minutes</span>
+      </div>
+    </div>
+
+    <!-- content -->
+    <div class="event-content">
+
+      <div class="content-block fade-in">
+        <h3>Rules &amp; Regulations</h3>
+        <ul class="rules-list">
+          <li>Each team must include a minimum of 3 instrumentalists.</li>
+          <li>A musical genre and a song from a different genre will be assigned to each team via a lottery system 3 weeks prior to the event.</li>
+          <li>The performance must be executed entirely within the assigned musical genre.</li>
+          <li>Participants must interpret the assigned song into their given genre and include it in the performance for a minimum duration of 1.5 minutes.</li>
+          <li>The use of vernacular languages is permitted.</li>
+          <li>Pre-recorded music or background tracks shall not be allowed.</li>
+          <li>The decision of the judges will be final and binding.</li>
+        </ul>
+      </div>
+
+      <div class="content-block fade-in">
+        <h3>Judging Criteria</h3>
+        <div class="judging-grid">
+          <div class="judging-item"><div class="num">01</div><p>Genre Adaptation &amp; Creativity</p></div>
+          <div class="judging-item"><div class="num">02</div><p>Musical Skill &amp; Technical Proficiency</p></div>
+          <div class="judging-item"><div class="num">03</div><p>Stage Presence &amp; Team Synchronization</p></div>
+          <div class="judging-item"><div class="num">04</div><p>Interpretation of Assigned Song</p></div>
+          <div class="judging-item"><div class="num">05</div><p>Fusion of Musical Elements &amp; Instruments</p></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">Maitree</div>
+          <div class="footer-school">Modern High School for Girls · Kolkata</div>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <ul class="contact-list">
+            <li><span class="contact-name">Sohani Chowdhury</span><span class="contact-num">+91 91470 88850</span></li>
+            <li><span class="contact-name">Ponam Agarwal</span><span class="contact-num">+91 98368 06100</span></li>
+            <li><span class="contact-name">Asaawari Sahai</span><span class="contact-num">+91 74390 76393</span></li>
+            <li><span class="contact-name">Nitya Shah</span><span class="contact-num">+91 79800 17937</span></li>
+            <li><span class="contact-name">Vaanya Karel</span><span class="contact-num">+91 98302 70409</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Maitree - Modern High School for Girls, Kolkata</span>
+        <span>31st July 2026</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    function toggleMenu() { document.getElementById('navLinks').classList.toggle('open'); }
+    setTimeout(() => { document.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible')); }, 150);
+  </script>
+</body>
+</html>

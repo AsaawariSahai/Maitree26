@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footnotes - Maitree 2026</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Rouge+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- navbar -->
+  <nav>
+    <a class="nav-logo" href="index.html">Maitree <span>'26</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="metamorphosis.html">Fashion</a></li>
+      <li><a href="footnotes.html" class="active">Dance</a></li>
+      <li><a href="crescendo.html">Music</a></li>
+      <li><a href="whisked.html">Cooking</a></li>
+      <li><a href="curtain.html">Drama</a></li>
+      <li><a href="stroked.html">Art</a></li>
+      <li><a href="cue.html">Videography</a></li>
+      <li><a href="submissions.html">Submissions</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+
+    <!-- main -->
+    <div class="event-hero">
+      <a class="back-btn" href="index.html">← Back to Home</a>
+      <span class="event-type-tag">Fusion Dance</span>
+      <h1 class="event-title">Footnotes</h1>
+      <div class="event-quickstats">
+        <span class="stat-pill"><strong>6+2</strong> Participants</span>
+        <span class="stat-pill"><strong>6+2</strong> Minutes</span>
+      </div>
+    </div>
+
+    <!-- content -->
+    <div class="event-content">
+
+      <div class="content-block fade-in">
+        <h3>Rules &amp; Regulations</h3>
+        <ul class="rules-list">
+          <li>The theme for the performance will be provided 3 weeks prior to the event.</li>
+          <li>The choreography must be centred entirely around the given theme.</li>
+          <li>Teams must demonstrate proficiency and skill in both eastern and western dance forms.</li>
+          <li>Any form of vulgarity is strictly prohibited and will lead to immediate disqualification.</li>
+          <li>All required music tracks must be submitted in the provided drive link by <strong>28th July</strong>.</li>
+          <li>Teams should also bring their tracks on a pendrive on the day of the performance.</li>
+          <li>The decision of the judges will be final and binding.</li>
+        </ul>
+      </div>
+
+      <div class="content-block fade-in">
+        <h3>Judging Criteria</h3>
+        <div class="judging-grid">
+          <div class="judging-item"><div class="num">01</div><p>Theme Interpretation</p></div>
+          <div class="judging-item"><div class="num">02</div><p>Fusion of Dance Styles</p></div>
+          <div class="judging-item"><div class="num">03</div><p>Choreography &amp; Creativity</p></div>
+          <div class="judging-item"><div class="num">04</div><p>Technique &amp; Performance Quality</p></div>
+          <div class="judging-item"><div class="num">05</div><p>Synchronization &amp; Overall Presentation</p></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">Maitree</div>
+          <div class="footer-school">Modern High School for Girls · Kolkata</div>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <ul class="contact-list">
+            <li><span class="contact-name">Sohani Chowdhury</span><span class="contact-num">+91 91470 88850</span></li>
+            <li><span class="contact-name">Ponam Agarwal</span><span class="contact-num">+91 98368 06100</span></li>
+            <li><span class="contact-name">Asaawari Sahai</span><span class="contact-num">+91 74390 76393</span></li>
+            <li><span class="contact-name">Nitya Shah</span><span class="contact-num">+91 79800 17937</span></li>
+            <li><span class="contact-name">Vaanya Karel</span><span class="contact-num">+91 98302 70409</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Maitree - Modern High School for Girls, Kolkata</span>
+        <span>31st July 2026</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    function toggleMenu() { document.getElementById('navLinks').classList.toggle('open'); }
+    setTimeout(() => { document.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible')); }, 150);
+  </script>
+</body>
+</html>
