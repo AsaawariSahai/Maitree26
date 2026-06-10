@@ -5,3 +5,4 @@
 5. Include profile - 10/6
 6. Include drive link in submission - 10/6
 7. Include 75 year logo - 10/6
+8. Add pictures in marquee
