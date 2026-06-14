@@ -256,6 +256,25 @@ a.event-card .card-name {
       .card-name { font-size: 1.8rem !important; }
       .card-meta { flex-direction: column; gap: 0.2rem !important; }
     }
+
+    /* card graphic */
+    .event-card { overflow: hidden; }
+    .card-graphic {
+      position: absolute;
+      right: -10px; bottom: -10px;
+      height: 130px; width: auto; object-fit: contain;
+      opacity: 0.15;
+      transform: scale(1) translateY(0);
+      transition: opacity 0.2s ease;
+      pointer-events: none; z-index: 0; filter: saturate(1.1);
+    }
+    .event-card:hover .card-graphic { opacity: 0.35; }
+    .card-accent, .card-body, .card-arrow { position: relative; z-index: 1; }
+    .card-graphic.dance  { height: 180px; right: -15px; bottom: -15px; }
+    .card-graphic.video  { height: 180px; right: -15px; bottom: -15px; }
+    .card-graphic.music  { height: 200px; right: 0; bottom: -10px; }
+    .card-graphic.fashion{ height: 200px; right: 0; bottom: -10px; }
+    .card-graphic.art    { height: 200px; right: 0; bottom: -10px; }
   </style>
 </head>
 <body>
@@ -354,6 +373,7 @@ a.event-card .card-name {
       </div>
       <div class="events-grid">
         <a class="event-card fade-in" href="metamorphosis.html">
+          <img src="events/fashion.png" class="card-graphic fashion" alt="">
           <div class="card-accent"></div>
           <div class="card-body">
             <p class="card-type">Fashion Show</p>
@@ -363,6 +383,7 @@ a.event-card .card-name {
           <span class="card-arrow">→</span>
         </a>
         <a class="event-card fade-in" href="footnotes.html">
+          <img src="events/dance.png" class="card-graphic dance" alt="">
           <div class="card-accent"></div>
           <div class="card-body">
             <p class="card-type">Fusion Dance</p>
@@ -372,6 +393,7 @@ a.event-card .card-name {
           <span class="card-arrow">→</span>
         </a>
         <a class="event-card fade-in" href="crescendo.html">
+          <img src="events/music.png" class="card-graphic music" alt="">
           <div class="card-accent"></div>
           <div class="card-body">
             <p class="card-type">Fusion Music</p>
@@ -381,6 +403,7 @@ a.event-card .card-name {
           <span class="card-arrow">→</span>
         </a>
         <a class="event-card fade-in" href="whisked.html">
+          <img src="events/cooking.png" class="card-graphic cooking" alt="">
           <div class="card-accent"></div>
           <div class="card-body">
             <p class="card-type">Non-Fire Cooking</p>
@@ -390,6 +413,7 @@ a.event-card .card-name {
           <span class="card-arrow">→</span>
         </a>
         <a class="event-card fade-in" href="curtain.html">
+          <img src="events/drama1.png" class="card-graphic drama" alt="">
           <div class="card-accent"></div>
           <div class="card-body">
             <p class="card-type">Drama & Playwrighting</p>
@@ -399,6 +423,7 @@ a.event-card .card-name {
           <span class="card-arrow">→</span>
         </a>
         <a class="event-card fade-in" href="stroked.html">
+          <img src="events/art.png" class="card-graphic art" alt="">
           <div class="card-accent"></div>
           <div class="card-body">
             <p class="card-type">Art & Creative Writing</p>
@@ -408,6 +433,7 @@ a.event-card .card-name {
           <span class="card-arrow">→</span>
         </a>
         <a class="event-card fade-in" href="cue.html">
+          <img src="events/video.png" class="card-graphic video" alt="">
           <div class="card-accent"></div>
           <div class="card-body">
             <p class="card-type">Videography & Editing</p>
@@ -417,6 +443,7 @@ a.event-card .card-name {
           <span class="card-arrow">→</span>
         </a>
         <a class="event-card fade-in">
+          <img src="events/hunt.png" class="card-graphic pirates" alt="">
           <div class="card-accent"></div>
           <div class="card-body">
             <p class="card-type">Treasure Hunt</p>
