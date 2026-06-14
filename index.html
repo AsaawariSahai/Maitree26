@@ -76,13 +76,14 @@ a.event-card .card-name {
 }
     .hero-title em { font-family: "Rouge Script", cursive;
   font-weight: 400;
-  font-size: 9rem; color: #ff6b6b;
-  text-shadow: 0 0 30px rgba(255,80,80,0.6), 0 0 60px rgba(255,80,80,0.25); }
+
+  font-size: 9rem; color: #e45555;
+  text-shadow: 50px 50px 120px rgba(206, 204, 102, 0.6), 50px 50px 180px rgba(205, 207, 181, 0.25); }
     .hero-year {
       font-family: 'Inter', sans-serif;
       font-size: clamp(1rem, 3vw, 1.6rem);
       color: rgba(255,255,255,0.95); letter-spacing: 0.4em;
-      text-shadow: 0 0 12px rgba(255,255,255,0.3);
+      text-shadow: 0 0 18px rgba(255,255,255,0.3);
       text-transform: uppercase; margin-bottom: 0.8rem;
     }
     .hero-subtitle {
@@ -307,9 +308,26 @@ a.event-card .card-name {
     <section class="hero">
       <canvas id="heroCanvas" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;"></canvas>
       <div class="hero-content" style="position:relative;z-index:1;">
-        <p class="hero-eyebrow">Modern High School for Girls, Kolkata</p>
+        <img src="star.png" style="
+            position:absolute;
+            top:50%; left:50%;
+            transform:translate(-50%,-50%);
+            width:clamp(420px,68vw,780px);
+            height:auto;
+            opacity:0.35;
+            mix-blend-mode:normal;
+            pointer-events:none;
+            z-index:0;
+            filter:saturate(0.5) brightness(0.45) contrast(0.75);
+          " alt="">
+        <div style="position:relative;display:inline-block;margin-bottom:0;">
+          <div style="position:relative;z-index:1;">
+            <p class="hero-eyebrow">Modern High School for Girls, Kolkata</p>
         <h1 class="hero-title"><em>Maitree</em></h1>
-        <p class="hero-year">2 0 2 6</p><br><br>
+        <p class="hero-year">2 0 2 6</p>
+          </div><!-- /relative z1 -->
+        </div><!-- /inline-block -->
+        <br><br>
         <p class="countdown-label">COUNTDOWN</p>
         <div class="countdown">
           <div class="cd-unit">
@@ -380,7 +398,7 @@ a.event-card .card-name {
             <h3 class="card-name">Metamorphosis</h3>
             <div class="card-meta"><span>👥 8+2 participants</span><span>⏱ 7+2 min</span></div>
           </div>
-          <span class="card-arrow">→</span>
+          <!-- <span class="card-arrow">→</span> -->
         </a>
         <a class="event-card fade-in" href="footnotes.html">
           <img src="events/dance.png" class="card-graphic dance" alt="">
@@ -390,7 +408,7 @@ a.event-card .card-name {
             <h3 class="card-name">Footnotes</h3>
             <div class="card-meta"><span>👥 6+2 participants</span><span>⏱ 6+2 min</span></div>
           </div>
-          <span class="card-arrow">→</span>
+          <!-- <span class="card-arrow">→</span> -->
         </a>
         <a class="event-card fade-in" href="crescendo.html">
           <img src="events/music.png" class="card-graphic music" alt="">
@@ -400,7 +418,7 @@ a.event-card .card-name {
             <h3 class="card-name">Crescendo</h3>
             <div class="card-meta"><span>👥 5+2 participants</span><span>⏱ 5+2 min</span></div>
           </div>
-          <span class="card-arrow">→</span>
+          <!-- <span class="card-arrow">→</span> -->
         </a>
         <a class="event-card fade-in" href="whisked.html">
           <img src="events/cooking.png" class="card-graphic cooking" alt="">
@@ -410,7 +428,7 @@ a.event-card .card-name {
             <h3 class="card-name">Whisked Away</h3>
             <div class="card-meta"><span>👥 2 participants</span><span>⏱ 2 hours</span></div>
           </div>
-          <span class="card-arrow">→</span>
+          <!-- <span class="card-arrow">→</span> -->
         </a>
         <a class="event-card fade-in" href="curtain.html">
           <img src="events/drama1.png" class="card-graphic drama" alt="">
@@ -420,17 +438,17 @@ a.event-card .card-name {
             <h3 class="card-name">Curtain Call</h3>
             <div class="card-meta"><span>👥 6–8 participants</span><span>⏱ 2 rounds</span></div>
           </div>
-          <span class="card-arrow">→</span>
+          <!-- <span class="card-arrow">→</span> -->
         </a>
         <a class="event-card fade-in" href="stroked.html">
           <img src="events/art.png" class="card-graphic art" alt="">
           <div class="card-accent"></div>
           <div class="card-body">
-            <p class="card-type">Art & Creative Writing</p>
+            <p class="card-type">Art</p>
             <h3 class="card-name">Stroke'd</h3>
             <div class="card-meta"><span>👥 2 participants</span><span>⏱ 30 min/round</span></div>
           </div>
-          <span class="card-arrow">→</span>
+          <!-- <span class="card-arrow">→</span> -->
         </a>
         <a class="event-card fade-in" href="cue.html">
           <img src="events/video.png" class="card-graphic video" alt="">
@@ -440,7 +458,7 @@ a.event-card .card-name {
             <h3 class="card-name">Cue!</h3>
             <div class="card-meta"><span>👥 2+2 participants</span><span>⏱ 2-min video</span></div>
           </div>
-          <span class="card-arrow">→</span>
+          <!-- <span class="card-arrow">→</span> -->
         </a>
         <a class="event-card fade-in">
           <img src="events/hunt.png" class="card-graphic pirates" alt="">
