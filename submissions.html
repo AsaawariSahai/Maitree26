@@ -11,25 +11,40 @@
   <style>
     /* specific */
     .sub-hero {
-      background: linear-gradient(135deg, var(--blue) 0%, var(--blue-mid) 100%);
+      background: linear-gradient(135deg, #1a1030 0%, #2a0f1f 50%, #0d1a2e 100%);
       padding: 5rem 2rem 4rem;
       text-align: center;
+      border-bottom: 2px solid var(--gold);
+      position: relative;
+      overflow: hidden;
+    }
+    .sub-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(208,112,255,0.18) 0%, transparent 45%),
+        radial-gradient(circle at 80% 30%, rgba(245,200,66,0.15) 0%, transparent 45%),
+        radial-gradient(circle at 50% 90%, rgba(0,201,201,0.12) 0%, transparent 45%);
+      pointer-events: none;
     }
     .sub-eyebrow {
       font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
-      color: rgba(255,255,255,0.4); margin-bottom: 1rem;
+      color: rgba(255,255,255,0.55); margin-bottom: 1rem; position: relative; z-index: 1;
     }
     .sub-hero h1 {
       font-family: "Rouge Script", cursive;
-      font-size: 5rem;
-      color: var(--white);
+      font-size: 5.5rem;
+      color: var(--gold);
       line-height: 1;
       font-weight: 400;
-      color: var(--white); font-style: italic; margin-bottom: 0.8rem;
+      margin-bottom: 0.8rem;
+      text-shadow: 0 0 35px rgba(245,200,66,0.6), 0 0 70px rgba(208,112,255,0.25);
+      position: relative; z-index: 1;
     }
     .sub-hero p {
-      color: rgba(255,255,255,0.6); font-size: 0.9rem;
+      color: rgba(255,255,255,0.8); font-size: 0.92rem;
       max-width: 500px; margin: 0 auto; line-height: 1.7;
+      position: relative; z-index: 1;
     }
 
     .sub-content {
@@ -38,51 +53,76 @@
     }
 
     .email-box {
-      background: var(--white); border: 2px solid var(--blue);
-      border-radius: 8px; padding: 2rem; text-align: center; margin: 2rem 0;
+      background: linear-gradient(155deg, #1c1c1c 0%, #141414 100%);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--gold);
+      border-radius: 10px; padding: 2.2rem; text-align: center; margin: 2rem 0;
+      box-shadow: 0 10px 30px rgba(245,200,66,0.08);
     }
     .email-label {
-      font-size: 1rem; letter-spacing: 0.18em; text-transform: uppercase;
-      color: rgb(132, 19, 19); margin-bottom: 0.6rem;
+      font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 0.7rem; font-weight: 700;
+      text-shadow: 0 0 12px rgba(245,200,66,0.4);
     }
     .email-addr {
       font-family: 'Playfair Display', serif;
-      font-size: 1.3rem; color: var(--blue); font-weight: 700;
+      font-size: 1.4rem; color: var(--white); font-weight: 700;
       word-break: break-all;
     }
 
     .submit-btn {
       display: block; width: 100%;
-      background: var(--red); color: var(--white);
+      background: linear-gradient(135deg, var(--red) 0%, #e8374f 100%);
+      color: var(--white);
       text-decoration: none; text-align: center;
-      padding: 1.1rem; border-radius: 6px;
-      font-size: 0.9rem; font-weight: 600;
-      letter-spacing: 0.08em; text-transform: uppercase;
-      transition: background 0.2s, transform 0.15s; margin-top: 1rem;
+      padding: 1.15rem; border-radius: 6px;
+      font-size: 0.85rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      transition: all 0.25s ease; margin-top: 1rem;
+      box-shadow: 0 8px 24px rgba(200,16,46,0.35);
     }
-    .submit-btn:hover { background: var(--red-dark); transform: translateY(-2px); }
+    .submit-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(200,16,46,0.5);
+    }
+
+    .submit-btn.drive {
+      background: linear-gradient(135deg, var(--blue-mid) 0%, var(--blue-light) 100%);
+      box-shadow: 0 8px 24px rgba(45,95,183,0.35);
+    }
+    .submit-btn.drive:hover {
+      box-shadow: 0 12px 32px rgba(45,95,183,0.5);
+    }
 
     .deadline-note {
-      background: #FFF8F8;
-      border: 1px solid #c8102e33;
-      border-left: 4px solid var(--red);
-      border-radius: 4px; padding: 1.2rem 1.5rem; margin-top: 2rem;
-      font-size: 0.83rem; color: #4f0612e6; line-height: 1.8;
+      background: linear-gradient(155deg, #1f1414 0%, #161010 100%);
+      border: 1px solid rgba(255,107,107,0.2);
+      border-left: 4px solid var(--red-light);
+      border-radius: 6px; padding: 1.3rem 1.6rem; margin-top: 2rem;
+      font-size: 0.84rem; color: rgba(255,255,255,0.78); line-height: 1.85;
     }
-    .deadline-note strong { color: var(--red-dark); }
+    .deadline-note strong { color: #ff8a8a; }
 
     .checklist-section { margin-top: 2.5rem; }
     .checklist-section h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem; color: rgb(171, 198, 237); margin-bottom: 1rem; letter-spacing: 0.04em;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.74rem; font-weight: 700; color: var(--teal);
+      letter-spacing: 0.2em; text-transform: uppercase;
+      margin-bottom: 1.2rem; padding-bottom: 0.6rem;
+      border-bottom: 1px solid rgba(0,201,201,0.25);
     }
-    .checklist { display: flex; flex-direction: column; gap: 0.7rem; }
+    .checklist { display: flex; flex-direction: column; gap: 0.9rem; }
     .checklist label {
-      display: flex; align-items: flex-start; gap: 0.8rem;
-      font-size: 0.85rem; cursor: pointer; line-height: 1.5; color: var(--text);
+      display: flex; align-items: flex-start; gap: 0.85rem;
+      font-size: 0.86rem; cursor: pointer; line-height: 1.65;
+      color: rgba(255,255,255,0.82);
+      padding: 0.6rem 0.8rem;
+      border-radius: 6px;
+      transition: background 0.2s;
     }
+    .checklist label:hover { background: rgba(255,255,255,0.04); }
     .checklist input[type="checkbox"] {
-      accent-color: var(--red); width: 16px; height: 16px;
+      accent-color: var(--pink); width: 17px; height: 17px;
       flex-shrink: 0; margin-top: 2px;
     }
   </style>
@@ -139,7 +179,7 @@
         Teams must also bring all tracks and presentations on a <strong>pendrive</strong> on event day as a backup.
       </div>
 
- <a href="https://drive.google.com/drive/folders/1cQRD4mNRISg1j265aMH_AfH6QQnVgysK?usp=sharing" class="submit-btn fade-in">
+ <a href="https://drive.google.com/drive/folders/1cQRD4mNRISg1j265aMH_AfH6QQnVgysK?usp=sharing" class="submit-btn drive fade-in">
         Submission Drive Here →
       </a>
 
