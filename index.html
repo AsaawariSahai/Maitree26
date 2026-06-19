@@ -17,6 +17,14 @@
       align-items: center; justify-content: center;
       position: relative; overflow: hidden;
     }
+    .hero-heading-img {
+  max-width: clamp(360px, 50vw, 640px);
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 0 30px rgba(255,255,255,0.25));
+}
     /* subtle noise texture */
     .hero::before {
       content: '';
@@ -321,8 +329,9 @@ a.event-card .card-name {
         <div style="position:relative;display:inline-block;margin-bottom:0;">
           <div style="position:relative;z-index:1;">
             <p class="hero-eyebrow">Modern High School for Girls, Kolkata</p>
-        <h1 class="hero-title"><em>Maitree</em></h1>
-        <p class="hero-year">2 0 2 6</p>
+        <!-- <h1 class="hero-title"><em>Maitree</em></h1> -->
+        <!-- <p class="hero-year">2 0 2 6</p> -->
+         <img src="maitree-heading.png" alt="Maitree 2026" class="hero-heading-img">
           </div><!-- /relative z1 -->
         </div><!-- /inline-block -->
         <br><br>

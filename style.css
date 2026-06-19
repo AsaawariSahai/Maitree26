@@ -198,11 +198,12 @@ nav {
   margin-bottom: 1.2rem;
   position: relative; z-index: 1;
   font-family: "Rouge Script", cursive;
-      font-size: 5rem;
+      font-size: 6rem;
       color: var(--white);
       line-height: 1;
       font-weight: 400;
       font-style: italic;
+    text-shadow: 0 0 35px rgba(238, 191, 235, 0.6), 0 0 70px rgba(219, 169, 244, 0.25);
 }
 
 /* colour the event title per event */
